@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+{%block title_block%}
+    <title>Add</title>
+{%endblock%}
+
+{%block body_block%}
+<div class="container col-md-4 text-center">
+    <h1>Edit Cakes Here!!!!</h1>
+    <form action="" method="post" enctype="multipart/form-data" class="form-control mt-3">
+        {%csrf_token%}
+        {{form.as_p}}
+        <input type="submit" value="Update" class="btn btn-outline-warning">
+    </form>
+</div>
+{%endblock%}

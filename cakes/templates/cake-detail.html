@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+
+{%block title_block%}
+    <title>Add</title>
+{%endblock%}
+
+{%block body_block%}
+<div class="container col-6 mt-5">
+  <div class="card mb-3 mt-3 mx-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4 border border-dark">
+          <img src="{{cakes.cake_image.url}}" class="img-fluid w-100 h-100" alt="...">
+        </div>
+        <div class="col-md-8 border border-dark">
+          <div class="card-body">
+            <h5 class="card-title text-danger text-decoration-underline">Cake Name: {{cakes.cake_name}}</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis modi consequuntur vel consequatur ratione earum dolore, eos reprehenderit accusantium fugiat illum quasi tempora velit autem explicabo harum molestiae laudantium accusamus.</p>
+            <p class="card-text">Weight: {{cakes.cake_weight}} Kg <br> Price: Rs.{{cakes.cake_price}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{%endblock%}
