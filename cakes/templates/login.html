@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-    <title>Register</title>
+    <title>lOGIN</title>
 </head>
 <body>
     {%for m in messages%}
@@ -22,12 +22,17 @@
             </div>
         {%endif%}
     {%endfor%}
-    <div class="container col-md-4 mt-3 ">
+    
+    <div class="container col-md-4 mt-5 ">
         <form action="" class="form-control" method="post" enctype="multipart/form-data">
+            <h1 class="text-center">Login</h1><br>
             {%csrf_token%}
             {{form.as_p}}
             <div class="text-center">
                 <input type="submit" value="Login" class="btn btn-primary w-100">
+            </div>
+            <div>
+                <p>Not an Account yet? <a href="{%url 'register'%}">Create New account</p></a>
             </div>
          </form>
 

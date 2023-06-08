@@ -27,7 +27,7 @@ urlpatterns = [
     path('cake/<int:j>/change',views.CakeEditView.as_view(),name='cake-edit'),
     path('cake/<int:j>/remove',views.CakeDeleteView.as_view(),name='cake-delete'),
     path('register/',views.SignUpView.as_view(),name='register'),
-    path('signin/',views.SignInView.as_view(),name='signin'),
+    path('',views.SignInView.as_view(),name='signin'),
     path('signout/',views.sign_out_view,name='logout'),
     
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
